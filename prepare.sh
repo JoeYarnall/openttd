@@ -18,9 +18,8 @@ apt update -qq
 $minimal_apt_get_install dumb-init wget unzip ca-certificates libfontconfig1 libfreetype6 libfluidsynth1 libicu-dev libpng12-0 liblzma-dev liblzo2-2 libsdl1.2debian libsdl2-2.0-0 > /dev/null 2>&1
 
 ## Download and install openttd
-wget -q https://cdn.openttd.org/openttd-releases/${OPENTTD_VERSION}/openttd-${OPENTTD_VERSION}-linux-${ID}-${UBUNTU_CODENAME}-amd64.deb
-dpkg -i openttd-${OPENTTD_VERSION}-linux-${ID}-${UBUNTU_CODENAME}-amd64.deb
-
+wget -q https://github.com/JGRennison/OpenTTD-patches/releases/download/jgrpp-0.42.0/openttd-jgrpp-0.42.0-linux-${ID}-${UBUNTU_CODENAME}-amd64.deb
+dpkg -i openttd-jgrpp-0.42.0-linux-${ID}-${UBUNTU_CODENAME}-amd64.deb
 
 ## Download GFX and install
 mkdir -p /usr/share/games/openttd/baseset/
